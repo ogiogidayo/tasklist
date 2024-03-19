@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>タスク管理アプリケーション</title>
+    </head>
+    <body>
+        <h1>タスク管理アプリケーション</h1>
+        <div class="task_form">
+            <h2>タスクの登録</h2>
+
+            <form action="/add">
+                <label>タスク</label>
+                <input name = "task" type="text" />
+                <label>期限</label>
+                <input name="deadline" type="date" />
+                <input name="submit" value="登録" />
+            </form>
+        </div>
+
+        <div class="tasklist">
+            <h2>現在のタスク一覧</h2>
+            <table border="1" style="border-collapse: collapse;">
+                <thead>
+                    <tr><th class="hiden">ID</th><th>タスク</th><th>期限</th><th>状態</th></tr>
+                </thead>
+            </table>
+        </div>
+    </body>
+</html>
