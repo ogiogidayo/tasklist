@@ -1,5 +1,6 @@
 package jp.gihyo.projava.tasklist;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,6 +25,11 @@ public class HomeRestController {
                 It Work!
                 現在時刻は%sです。
                 """.formatted(LocalDateTime.now());
+    }
+    @RequestMapping(value = "/hello")
+    String hello(Model model) {
+        model.addAttribute("time", LocalDateTime.now());
+        return "hello";
     }
 
     @GetMapping("/restadd")
