@@ -24,7 +24,16 @@
                 <thead>
                     <tr><th class="hiden">ID</th><th>タスク</th><th>期限</th><th>状態</th></tr>
                 </thead>
+                <tbody>
+                    <tr th:each="task : ${taskList}">
+                        <td class="hidden" th:text="${task.id}"></td>
+                        <td th:text="${task.task}"></td>
+                        <td width="100px" th:text="${task.deadline}"></td>
+                        <td width="50px" th:text="${task.done} ? '完了': '未完了'"></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
+
     </body>
 </html>
