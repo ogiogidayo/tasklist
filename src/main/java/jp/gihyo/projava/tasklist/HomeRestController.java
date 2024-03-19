@@ -18,20 +18,6 @@ public class HomeRestController {
     record TaskItem(String id, String task, String deadline, boolean done) {}
     private List<TaskItem> taskItems = new ArrayList<>();
 
-    @RequestMapping(value = "/resthello")
-    String hello() {
-        return """
-                Hello.
-                It Work!
-                現在時刻は%sです。
-                """.formatted(LocalDateTime.now());
-    }
-    @RequestMapping(value = "/hello")
-    String hello(Model model) {
-        model.addAttribute("time", LocalDateTime.now());
-        return "hello";
-    }
-
     @GetMapping("/restadd")
     String addItem(@RequestParam("task") String task,
                    @RequestParam("deadline") String deadline) {
