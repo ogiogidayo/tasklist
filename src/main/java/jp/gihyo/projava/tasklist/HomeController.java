@@ -19,4 +19,10 @@ public class HomeController {
         model.addAttribute("time", LocalDateTime.now());
         return "hello";
     }
+
+    @RequestMapping("/list")
+    String listItems(Model model) {
+        model.addAttribute("taskList", taskItems);
+        return "home";
+    }
 }
