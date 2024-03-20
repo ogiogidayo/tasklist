@@ -20,7 +20,7 @@ input {
     grid-template-columns: 100px 1fr;
 }
 .task_form input[type="date"], select {
-    width: 100%;
+    width: 150px;
 }
 
 /* タスク一覧 */
