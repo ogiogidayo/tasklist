@@ -15,7 +15,7 @@ import java.util.UUID;
 public class HomeController {
 
     record TaskItem(String id, String task, String deadline, boolean done) {}
-    private List<HomeRestController.TaskItem> taskItems = new ArrayList<>();
+    private List<TaskItem> taskItems = new ArrayList<>();
 
     @RequestMapping("/hello")
     String hello(Model model) {
@@ -34,7 +34,7 @@ public class HomeController {
                    @RequestParam("deadline") String deadline) {
      String id = UUID.randomUUID().toString().substring(0, 8);
      TaskItem item = new TaskItem(id, task, deadline, false);
-
+     taskItems.add(item);
      return "redirect:/list";
     }
 }
