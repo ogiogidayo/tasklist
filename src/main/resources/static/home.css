@@ -22,3 +22,10 @@ input {
 .task_form input[type="date"], select {
     width: 100%;
 }
+
+/* タスク一覧 */
+.tasklist table {
+    width: 100%;
+    border: 1px solid;
+    border-collapse: collapse;
+}
