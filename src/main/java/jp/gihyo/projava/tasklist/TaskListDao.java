@@ -24,7 +24,7 @@ public class TaskListDao {
 
     public void add(TaskItem taskItem) {
         SqlParameterSource param = new BeanPropertySqlParameterSource(taskItem);
-        SimpleJdbcInsert insert = new SimpleJdbcInsert(jdbcTemplate).withTableName("tasklsit");
+        SimpleJdbcInsert insert = new SimpleJdbcInsert(jdbcTemplate).withTableName("tasklist");
         insert.execute(param);
     }
 
